@@ -1,25 +1,6 @@
-import { View } from 'react-native';
+import TextExample from './src/TextExample';
+// import ViewExample from './src/ViewExample';
 
 export default function App() {
-    return (
-        <View style={{ flex: 1, backgroundColor: 'plum' }}>
-            <View
-                style={{ width: 200, height: 200, backgroundColor: 'gold' }}
-            />
-            <View
-                style={{
-                    width: 200,
-                    height: 200,
-                    backgroundColor: 'lightgreen',
-                }}
-            />
-            <View
-                style={{
-                    width: 200,
-                    height: 200,
-                    backgroundColor: 'lightblue',
-                }}
-            />
-        </View>
-    );
+    return <TextExample />;
 }
