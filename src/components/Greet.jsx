@@ -1,9 +1,14 @@
 import { Text, View, StyleSheet } from 'react-native';
 
-const Greet = ({ name }) => {
+const Greet = () => {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Hello {name}</Text>
+            <View style={[styles.box, styles.lightBlue]}>
+                <Text>Lightblue box</Text>
+            </View>
+            <View style={[styles.box, styles.lightGreen]}>
+                <Text>Lightgreen box</Text>
+            </View>
         </View>
     );
 };
@@ -14,10 +19,16 @@ const styles = StyleSheet.create({
         backgroundColor: 'plum',
         padding: 60,
     },
-    title: {
-        color: 'white',
-        fontSize: 24,
-        fontWeight: 'bold',
+    box: {
+        width: 100,
+        height: 100,
+        padding: 10,
+    },
+    lightBlue: {
+        backgroundColor: 'lightblue',
+    },
+    lightGreen: {
+        backgroundColor: 'lightgreen',
     },
 });
 
