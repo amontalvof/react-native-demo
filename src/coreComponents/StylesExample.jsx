@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet } from 'react-native';
 
-const Greet = () => {
+const StylesExample = () => {
     return (
         <View style={styles.container}>
             <View style={styles.darkMode}>
@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Greet;
+export default StylesExample;
