@@ -27,7 +27,6 @@ export default function App() {
                 <FlatList
                     data={pokemonList}
                     renderItem={({ item }) => {
-                        console.log(item.id);
                         return (
                             <View key={item.id} style={styles.card}>
                                 <Text style={styles.cardText}>{item.type}</Text>
@@ -36,6 +35,7 @@ export default function App() {
                         );
                     }}
                     keyExtractor={(item) => item.id.toString()}
+                    ItemSeparatorComponent={<View style={{ height: 16 }} />}
                     // horizontal
                 />
             </View>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         padding: 16,
         borderRadius: 8,
         borderWidth: 1,
-        margin: 16,
+        // marginBottom: 16,
     },
     cardText: {
         fontSize: 30,
