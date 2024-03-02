@@ -1,6 +1,6 @@
 import { StyleSheet, View, SafeAreaView, StatusBar } from 'react-native';
-import FlatListComponent from './src/rnList/FlatListComponent';
-import SectionListComponent from './src/rnList/SectionListComponent';
+import FlatListComponent from './FlatListComponent';
+import SectionListComponent from './SectionListComponent';
 
 export default function App() {
     return (
