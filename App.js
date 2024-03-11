@@ -15,6 +15,11 @@ export default function App() {
                 style={styles.input}
                 value={name}
                 onChangeText={setName}
+                placeholder="Enter your name"
+                autoCorrect={false}
+                autoCapitalize="none"
+                // secureTextEntry
+                // keyboardType="numeric"
             />
             <Text style={styles.text}>My name is {name}</Text>
         </SafeAreaView>
