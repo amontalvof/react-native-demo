@@ -21,6 +21,11 @@ export default function App() {
                 // secureTextEntry
                 // keyboardType="numeric"
             />
+            <TextInput
+                style={[styles.input, styles.multilineText]}
+                placeholder="Message"
+                multiline
+            />
             <Text style={styles.text}>My name is {name}</Text>
         </SafeAreaView>
     );
@@ -41,5 +46,9 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 20,
         padding: 10,
+    },
+    multilineText: {
+        minHeight: 100,
+        textAlignVertical: 'top',
     },
 });
