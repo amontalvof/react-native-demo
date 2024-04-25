@@ -6,10 +6,12 @@ import {
     StyleSheet,
     Text,
     View,
+    ActivityIndicator,
 } from 'react-native';
 
 export default function App() {
     const [postList, setPostList] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     const fetchData = async (limit = 10) => {
         try {
             const response = await fetch(
@@ -17,6 +19,7 @@ export default function App() {
             );
             const data = await response.json();
             setPostList(data);
+            setIsLoading(false);
         } catch (error) {
             console.error(error);
         }
@@ -26,6 +29,15 @@ export default function App() {
         fetchData(3);
         return () => {};
     }, []);
+
+    if (isLoading) {
+        return (
+            <SafeAreaView style={styles.container}>
+                <ActivityIndicator size="large" color="#0000ff" />
+                <Text>Loading...</Text>
+            </SafeAreaView>
+        );
+    }
 
     return (
         <SafeAreaView style={styles.container}>
