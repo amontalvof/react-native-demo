@@ -12,6 +12,8 @@ import {
 export default function App() {
     const [postList, setPostList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [refreshing, setRefreshing] = useState(false);
+
     const fetchData = async (limit = 10) => {
         try {
             const response = await fetch(
@@ -23,6 +25,12 @@ export default function App() {
         } catch (error) {
             console.error(error);
         }
+    };
+
+    const handleRefresh = () => {
+        setRefreshing(true);
+        fetchData(5);
+        setRefreshing(false);
     };
 
     useEffect(() => {
@@ -76,6 +84,8 @@ export default function App() {
                             </Text>
                         );
                     }}
+                    refreshing={refreshing}
+                    onRefresh={handleRefresh}
                 />
             </View>
         </SafeAreaView>
