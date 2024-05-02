@@ -1,5 +1,7 @@
-import RNetworking from './src/rnNetworking';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
-    return <RNetworking />;
+    return (
+        <NavigationContainer>{/* Rest of your app code */}</NavigationContainer>
+    );
 }
