@@ -1,7 +1,5 @@
-import { NavigationContainer } from '@react-navigation/native';
+import RNNavigation from './src/rnNavigation';
 
 export default function App() {
-    return (
-        <NavigationContainer>{/* Rest of your app code */}</NavigationContainer>
-    );
+    return <RNNavigation />;
 }
