@@ -9,8 +9,16 @@ export default function RNNavigation() {
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
-                <Stack.Screen name="Home" component={HomeScreen} />
-                <Stack.Screen name="About" component={AboutScreen} />
+                <Stack.Screen
+                    name="Home"
+                    component={HomeScreen}
+                    initialParams={{ result: 'Hello' }}
+                />
+                <Stack.Screen
+                    name="About"
+                    component={AboutScreen}
+                    initialParams={{ name: 'Guest' }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     );

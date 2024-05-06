@@ -1,12 +1,18 @@
 import { Text, View, StyleSheet, Button } from 'react-native';
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = (props) => {
+    const { navigation, route } = props;
+    const { result } = route?.params;
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>HomeScreen</Text>
+            <Text style={styles.text}>Home {result}</Text>
             <Button
                 title="Go to About"
-                onPress={() => navigation.navigate('About')}
+                onPress={() =>
+                    navigation.navigate('About', {
+                        name: 'Lorem',
+                    })
+                }
             />
         </View>
     );
