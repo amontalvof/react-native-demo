@@ -1,5 +1,5 @@
-import RNNavigation from './src/rnNavigation';
+import DrawerNavigator from './src/rnNavigation/DrawerNavigator';
 
 export default function App() {
-    return <RNNavigation />;
+    return <DrawerNavigator />;
 }

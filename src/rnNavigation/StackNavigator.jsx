@@ -6,7 +6,7 @@ import { Pressable, Text } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
-const RNNavigation = () => {
+const StackNavigator = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator
@@ -54,4 +54,4 @@ const RNNavigation = () => {
     );
 };
 
-export default RNNavigation;
+export default StackNavigator;
