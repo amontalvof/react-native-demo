@@ -10,7 +10,19 @@ const DrawerNavigator = () => {
     return (
         <NavigationContainer>
             <Drawer.Navigator>
-                <Drawer.Screen name="Dashboard" component={DashboardScreen} />
+                <Drawer.Screen
+                    name="Dashboard"
+                    component={DashboardScreen}
+                    options={{
+                        title: 'My Dashboard',
+                        drawerLabel: 'Dashboard',
+                        drawerActiveTintColor: '#333',
+                        drawerActiveBackgroundColor: 'lightblue',
+                        drawerContentStyle: {
+                            backgroundColor: '#c6cbef',
+                        },
+                    }}
+                />
                 <Drawer.Screen name="Settings" component={SettingsScreen} />
             </Drawer.Navigator>
         </NavigationContainer>
