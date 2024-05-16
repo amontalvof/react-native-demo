@@ -1,5 +1,5 @@
-import DrawerNavigator from './src/rnNavigation/DrawerNavigator';
+import TabNavigator from './src/rnNavigation/TabNavigator';
 
 export default function App() {
-    return <DrawerNavigator />;
+    return <TabNavigator />;
 }
